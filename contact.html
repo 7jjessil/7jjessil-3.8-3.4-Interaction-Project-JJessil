@@ -1,0 +1,90 @@
+<!-- http://jomin.atwebpages.com/contact.php -->
+
+<!-- to acess form data: Webmail Acess, RoundCube, Login: admin@jjessil.dx.am Passowrd: as awardspace -->
+
+<html>
+	<head>
+		<title>Contact</title>
+				<title>Index</title>
+		<meta charset="utf-8">
+		<meta name="Keywords" content="contact.html, Php, CSS, gannett"/>
+		<meta name="Author" content="Jomin Jessil"/>
+		<meta name="Description" content="PHP Tutorial Contact page"/>
+		<meta name="viewport" content="width=device-width, intial-scale=1"/>
+		
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	
+	<body>
+		
+	<div class="grid-container">
+
+	<!--Navigation-->
+	
+	<div class="logo">
+		<a href="index.html"><img src="images/placeholder.png" height="40px"></a>
+	</div>
+		
+	<div class = "nav">
+			<ul>
+				<li><a href="animals_and_tips.html">Link 1</a></li>
+				<li><a href="contact.html">Link 2</a></li>
+			</ul>
+	</div>
+		
+		<!-- Form -->
+		<div class="contact_container">
+				<h1>Header</h1>
+
+			<form action="mail-test.php"  method="post">
+			
+		<!-- Name field -->
+	
+		<div class="row">
+			<div class="column2">
+			<input type="text" id="name" placeholder="Enter your full name">
+			</div>	
+		</div>
+		
+		<!-- Email field -->
+			
+		<div class="row">
+			<div class="column2">
+			<input type="text" id="email" name="Enter a valid email adress" placeholder="Your email address">
+			</div>
+		</div>
+		
+		<!-- Subject field -->
+			
+		<div class="row">
+			<div class="column2">
+			<textarea id="body"  name="body" placeholder="Enter your message" style="height:200px"></textarea>
+			</div>
+		</div>
+		
+		<br>
+		<!-- Submit Button -->
+		<div class="row">
+		<input type="submit" value="Submit">
+		</div>
+			
+		</form>
+				
+
+		<!-- Copyright Statement -->
+	</div>
+		
+					<div class="column3">
+			<img src="images/placeholder.png">
+		</div>
+		
+		<div class="footer">
+		&copy; copyright statement
+		</div>
+		
+		
+		</div>
+		
+
+	</body>
+</html>
