@@ -1,0 +1,762 @@
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	font-family: helvetoca. arial sans-serif;
+	margin: 0;
+    min-height: 100vh; 
+}
+
+.grid-container{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto auto auto auto auto auto auto;
+}
+
+/* Logo */
+
+.logo{
+	grid-column-start: 1;
+	grid-column-end: 2;
+	background-color: #555c66;
+	padding: 5px 5px 5px 0px;
+	text-align: right;
+	z-index: 9;
+	height: 50px;
+}
+
+/* Navigation Menu */
+
+.nav{
+	box-sizing: border-box;
+	background-color: #555c66;
+	grid-column-start: 2;
+	grid-column-end: 11;
+	height: 50px;
+    z-index: 9;
+}
+
+ul{
+	display: inline;
+	padding: 15px 0px 0px 0px;
+	list-style: none;
+}
+
+ul li{
+	font-family: Arial;
+	font-size: 16px;
+	font-weight: bold;
+	display: inline-block;
+	margin-right: -4px;
+	position: relative;
+	margin-left: 0px;
+	padding: 15px 35px 17px;
+}
+
+ul li:hover{
+	background: #555c66;
+}
+
+	a:link { color: white;}
+	a:visited { color: white;}
+	a:hover { color: #FFD533;}
+	a:active { color: blue;}
+
+a{
+text-decoration: none;
+}
+
+ul li ul{
+	padding:0;
+	position:absolute;
+	top:50px;
+	left:0;
+	width:180px;
+	display: none;
+	visibility: hidden;
+	background-color: lightgreen;
+}
+
+ul li ul li{
+	background: #555c66;
+	display: block;
+}
+
+ul li ul li:hover { 
+	background: #555c66;
+}
+
+ul li:hover ul { 
+	display: block;
+	visibility: visible;
+}
+
+/* Slideshow text */
+
+.headers_text h1{
+  color: #f2f2f2;
+  font-size: clamp(1em, 7.5vw, 8em);
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  text-align: center;
+  text-shadow: grey 1px 0 10px;
+}
+
+.headers_text p{
+  color: #f2f2f2;
+  font-size: clamp(0.9em, 1.4vw, 8em);
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  top: 230px;
+  text-shadow: grey 1px 0 10px;
+  margin: 0px 10% 0px 10%;
+}
+
+/* Slideshow images */
+
+.mySlides{
+	height: 400px;
+	grid-row: 2;
+}
+
+.mySlides img{
+	height: 450px;
+	width: 100%;
+	grid-row: 2;
+}
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+.slideshow{
+  grid-column: span 10;
+  grid-row: 2;
+  height: 450px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+  grid-row: 2;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  position: relative;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+/* Abouts_us (index) */
+
+.about_us_A  {
+	background-color: #CABDBD;
+	grid-column-start: 1;
+	grid-column-end: 4;
+	text-align: center;
+	height: 400px;
+	z-index: 30;
+	grid-row: 3;
+}
+
+.about_us_A img {
+	object-fit: cover;
+	height: auto;
+	width: 300px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about_us_B {
+	height: 400px;
+	color: #CABDBD;
+	position: relative;
+	background-color: #555c66;
+	grid-column-start: 4;
+	grid-column-end: 11;
+	grid-row: 3;
+}
+
+.about_us_B h1{
+	text-align: center;
+    font-size: clamp(2.6em, 2vw, 8em);
+}
+
+.about_us_B p{
+	text-align: center;
+  font-size: clamp(14px, 1.4vw, 18px);
+	padding: 0px 40px 0px 40px;
+}
+
+
+/* Animals (Animals & tips) */
+
+.animals{
+	grid-row: 6;
+	grid-column-start: 1;
+	grid-column-end: 11;
+	height: auto;
+	display: block;
+	background-color: none;
+	margin: 3em 0.5em 3em 0.5em;
+	text-align: center;
+}
+
+/* Image Overlay (Animals & tips amd What to bring tips) */
+.container, .tips{
+	position: relative;
+	width: 275px;
+	height: 275px;
+	display: inline-block;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	margin: 0px 5px 10px 5px;
+	background-color: #555c66;
+}
+
+.w_t_b_img {
+	position: relative;
+	width: 275px;
+	height: 200px;
+	display: inline-block;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	margin: 0px 5px 10px 5px;
+}
+
+.image{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.overlay{
+	position: absolute;
+	transition: all .2s ease;
+	opacity: 0;
+	background-color: #eee;
+}
+
+.w_t_b_img:hover .overlay, .container:hover .overlay{
+	opacity: 1;
+}
+
+.w_t_b_text{
+	color: white;
+	font-family: sans-serif;
+	position: absolute;
+	top: 10%;
+	left: 15%;
+	transform: translate(-10%,-10%);
+	font-size: 15px;
+	text-align: center;
+	height: 100%;
+}
+
+.text{
+	color: white;
+	font-family: sans-serif;
+	position: absolute;
+	top: 7%;
+	left: 15%;
+	transform: translate(-10%,-10%);
+	font-size: 15px;
+	text-align: center;
+}
+
+
+.overlayLeft{
+	height: 100%;
+	width: 0;
+	top: 0;
+	left: 0;
+	background-color: violet;
+}
+
+.overlayRight{
+	height: 100%;
+	width: 0;
+	top: 0;
+	right: 0;
+	background-color: orange;
+}
+
+.container:hover .overlayLeft, .container:hover .overlayRight{
+	width: 100%;
+}
+
+.overlayTop{
+	width: 100%;
+	height: 0;
+	top: 0;
+	left: 0;
+	background-color: lightblue;
+}
+
+.overlayBottom{
+	width: 100%;
+	height: 0;
+	bottom: 0;
+	left: 0;
+	background-color: magenta;
+}
+
+.container:hover .overlayTop, .container:hover .overlayBottom{
+	height: 100%;
+}
+
+.overlayCross{
+	width: 0;
+	height: 0;
+	top: 0;
+	left: 0;
+	background-color: crimson;
+}
+
+.container:hover .overlayCross{
+	height: 100%;
+	width: 100%;
+}
+
+.overlayFade{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: lightgreen;
+}
+
+/* Headers for Grid 4 & Grid 3 divs (Animals & tips and What to brign text) */
+
+.grid_4_headers {
+	box-sizing: border-box;
+	background-color: white;
+	grid-column: span 11;
+	height: 130px;
+}
+
+.grid_3_headers {
+	box-sizing: border-box;
+	background-color: #E3E3E3;
+	height: 170px;
+	grid-column: span 11;
+}
+
+.grid_4_headers h1, .grid_3_headers h1{
+  font-size: clamp(2.5em, 3.5vw, 8em);
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	color: #555c66;
+}
+
+.grid_4_headers h2, .grid_3_headers h2{
+    font-size: clamp(1em, 1.4vw, 8em);
+   text-align: center;
+	width: 80%;
+	position: absolute;
+	color: #555c66;
+    margin: 0px 10% 0px 10%;
+	padding: 110px 0px 0px 0px;
+}
+
+/* What to bring images & text & tips (index) */
+
+.what_to_bring_tips {
+  display: inline-block;
+  grid-column-start: 1;
+  grid-column-end: 11;
+  text-align: center;
+  color: #CABDBD;
+  grid-row: 6;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.what_to_bring_tips h2{
+    font-size: clamp(1.2em, 1.4vw, 8em);
+	padding: 0px 20px 0px 20px;
+	color: white;
+	
+}
+
+.what_to_bring_tips p{
+	font-size: 16px;
+	padding: 0px 20px 0px 20px;
+}
+
+.what_to_bring_tips img{
+	height: 125px;
+	width: 125px;
+	border-radius: 75px;
+	border: 8px solid #7A6E9A;
+	margin-top: 30px;
+}
+
+.w_t_b_img {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	background-color: #555c66;
+	display: inline-block;
+	width: 385px;
+	height: 245px;
+	text-align: center;
+	margin: 0px 20px 40px 20px;
+	border-radius: 10px;
+}
+
+/* Bottom to Top Button*/
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 500;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: black;
+  cursor: pointer;
+}
+
+#myBtn img{
+  border-radius: 25px;
+}
+#myBtn:hover {
+  background-color: #555;
+}
+
+/*********** Contact Form ***************/
+
+hr{
+	border: 1px solid #eee;
+}
+
+input[type=text], select, textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	resize: vertical;
+}
+
+input[type=submit] {
+	background-color: #6e6a6a;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	float: right;
+}
+
+input[type=submit]:hover {
+	background-color: #6e6a6a;
+}
+
+.contact_container {
+	padding: 20px;
+	grid-column-start: 1;
+	grid-column-end: 11;
+	grid-row: 2;
+	background-color: #9E9898;
+	height: 1000px;
+}
+
+.contact_container h1{
+	text-align: center;
+	color: white;
+    font-size: clamp(2.6em, 2vw, 8em);
+}
+
+.column2{
+	margin: auto auto auto auto;
+	margin-top: 6px;
+	text-align: center;
+
+}
+
+.row:after{
+	content: "";
+	display:table;
+	clear: both;
+}
+
+.row{
+	max-width: 700px;
+	min-width: 400px;
+	background-color: none;
+	margin: auto auto auto auto;
+}
+
+/* Footer */
+
+.footer, .contact_footer  {
+	background-color: #555c66;
+	text-align: center;
+	grid-column-start: 1;
+	grid-column-end: 11;
+	width: 100%;
+	padding: 25px;
+	height: 70px;
+	color: white;
+	grid-row: 7;
+}
+
+.contact_footer {
+	bottom: 0;
+	position: fixed;
+}
+
+/* On screens under 400px wide, decrease content size */
+@media only screen and (max-width: 299px) {
+  
+  div.about_us_B, div.about_us_A{
+	  height: 380px;
+  }
+	
+	div.slideshow img, div.slideshow{
+	  height: 200px
+	}
+	
+	div.mySlides{
+	  height: 150px
+	}
+	
+	.prev, .next {
+	  top: 150px;
+	}
+	
+	div.headers_text p{
+	top: 0%;
+	}
+
+	div.headers_text h1{
+	top: 10%;
+	}
+}
+
+
+/* On screens between  400px wide and 700px, decrease content size */
+@media only screen and (min-width: 300px) and (max-width: 700px) { 	
+	
+  div.about_us_B, div.about_us_A{
+	  height: 380px;
+  }
+	
+	div.slideshow img, div.slideshow{
+	  height: 250px
+	}
+	
+	div.mySlides{
+	  height: 200px
+	}
+	
+	.prev, .next {
+	  top: 170px;
+	}
+	
+	div.headers_text p{
+	top: 65%;
+	}
+
+	div.headers_text h1{
+	top: 10%;
+	}
+}
+
+/* On screens under 900px wide, decrease content size */
+@media only screen and (min-width: 701px) and (max-width: 900px) { 	
+	
+	div.headers_text p{
+	top: 60%;
+	}
+
+	div.headers_text h1{
+	top: 10%;
+	}
+	
+	div.slideshow img, div.slideshow{
+	  height: 350px;
+	}
+	
+	div.mySlides{
+	  height: 300px
+	}
+	
+	.prev, .next {
+	  top: 200px;
+	}
+}
+
+/* On screens under 1199 wide and above 901px, decrease content size */
+@media only screen and (min-width: 901px) and (max-width: 1199px) { 	
+	
+	div.headers_text p{
+	top: 60%;
+	}
+
+	div.headers_text h1{
+	top: 10%;
+	}
+	
+	div.what_to_bring_tips{
+	grid-column-start: 1;
+	grid-column-end: 11;
+    }	
+	
+	div.slideshow img, div.slideshow{
+	  height: 400px;
+	}
+	
+	div.mySlides{
+	  height: 350px
+	}
+
+	.prev, .next {
+	  top: 250px;
+	}
+}
+
+/* On screens under 1699 wide and above 1200px, decrease content size */
+@media only screen and (min-width: 1200px) and (max-width: 1699px) { 	
+	
+	div.headers_text p{
+	top: 60%;
+	}
+
+	div.headers_text h1{
+	top: 0%;
+	}
+	
+	div.what_to_bring_tips{
+	grid-column-start: 1;
+	grid-column-end: 11;
+    }	
+	
+	div.slideshow img, div.slideshow{
+	  height: 450px;
+	}
+	
+	div.mySlides{
+	  height: 400px
+	}
+
+	.prev, .next {
+	  top: 250px;
+	}
+}
+
+/* On screens under 2500px wide and above 1500px, decrease content size */
+@media only screen and (min-width: 1700px) and (max-width: 2500px) { 	
+	
+ div.what_to_bring_tips{
+	grid-column-start: 2;
+	grid-column-end: 10;
+    }
+    
+	div.animals{
+	grid-column-start: 2;
+	grid-column-end: 10;
+	}
+
+	div.about_us_A, div.about_us_B {
+	height: 425px;
+	}
+	
+	div.grid_4_headers h2, div.grid_3_headers h2{
+		margin-top: 30px;
+	}
+	
+    div.grid_3_headers{
+		height: 200px;
+	}
+	
+    div.grid_4_headers{
+		height: 160px;
+	}	
+	
+	 div.about_us_A img{
+	  width: 45%;
+    }
+
+	div.slideshow img, div.slideshow{
+	  height: 600px;
+	}
+	
+	div.mySlides{
+	  height: 550px
+	}
+	
+	div.headers_text p{
+	top: 55%;
+	}
+
+	div.headers_text h1{
+	}
+}
