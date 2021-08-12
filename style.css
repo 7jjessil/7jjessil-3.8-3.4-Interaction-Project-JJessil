@@ -5,17 +5,22 @@ html{
 body{
 	font-family: helvetoca. arial sans-serif;
 	margin: 0;
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .grid-container{
 	display: grid;
-	grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 	grid-template-rows: auto auto auto auto auto auto auto;
 }
 
 /* Logo */
 
 .logo{
+	grid-column-start: 1;
+	grid-column-end: 3;
 	background-color: #555c66;
 	padding: 5px 5px 5px 0px;
 	text-align: right;
@@ -28,8 +33,8 @@ body{
 .nav{
 	box-sizing: border-box;
 	background-color: #555c66;
-	grid-column-start: 2;
-	grid-column-end: 6;
+	grid-column-start: 3;
+	grid-column-end: 15;
 	height: 50px;
     z-index: 9;
 }
@@ -115,12 +120,12 @@ ul li:hover ul {
 /* Slideshow images */
 
 .mySlides{
-	height: 400px;
+	height: 450px;
 	grid-row: 2;
 }
 
 .mySlides img{
-	height: 450px;
+	height: 500px;
 	width: 100%;
 	grid-row: 2;
 }
@@ -131,9 +136,9 @@ body {font-family: Verdana, sans-serif; margin:0}
 img {vertical-align: middle;}
 
 .slideshow{
-  grid-column: span 6;
+  grid-column: span 14;
   grid-row: 2;
-  height: 450px;
+  height: 500px;
 }
 
 /* Slideshow container */
@@ -205,7 +210,7 @@ img {vertical-align: middle;}
   to {opacity: 1}
 }
 
-/* On smaller screens, decrease text size */
+/* On smaller screens,redcrease text size */
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
@@ -213,41 +218,55 @@ img {vertical-align: middle;}
 /* Abouts_us (index) */
 
 .about_us_A  {
-	background-color: #CABDBD;
-	grid-column-start: 1;
-	grid-column-end: 3;
+	margin-top: 50px;
+	padding: 35px 0px 35px 50px;
+	background-color: #BEB8D2;
+	grid-column-start: 2;
+	grid-column-end: 5;
 	text-align: center;
-	height: 400px;
 	z-index: 30;
 	grid-row: 3;
+	height: auto;
 }
 
 .about_us_A img {
+	padding: ;
 	object-fit: cover;
-	width: 60%;
 	height: auto;
-	margin: 50px 0px 0px 0px;
+	margin: 0px 0px 0px 10%;
+	width: 100%;
+	height: auto;
+	display: inline-block;
+	border-radius: 200px;
 }
 
+/* Textual section in about_Us (index.html) */
+
 .about_us_B {
-	height: 400px;
-	color: #CABDBD;
-	position: relative;
-	background-color: #555c66;
-	grid-column-start: 3;
-	grid-column-end: 6;
+	margin-top: 50px;
+	padding: 20px 0px 0px 0px;
+	height: auto;
+	grid-column-start: 5;
+	grid-column-end: 14;
 	grid-row: 3;
+	background-color: #BEB8D2;
+	text-align: left;
 }
 
 .about_us_B h1{
-	text-align: center;
-    font-size: clamp(2.6em, 2vw, 8em);
+  font-size: clamp(2.5em, 3.5vw, 8em);
+	width: 65%;
+	position: absolute;
+	color: #555c66;
+	padding: 0px 10% 30px 10%;
 }
 
 .about_us_B p{
-	text-align: center;
-  font-size: clamp(14px, 1.4vw, 16px);
-	padding: 0px 40px 0px 40px;
+    font-size: clamp(1em, 1.2vw, 14px);
+	position: absolute;
+	color: #555c66;
+	width: 65%;
+	padding: 100px 10% 30px 10%;
 }
 
 /* 5 helpful tips (animals_and_tips) */
@@ -256,11 +275,11 @@ img {vertical-align: middle;}
 	height: auto;
 	position: relative;
 	grid-column-start: 1;
-	grid-column-end: 7;
+	grid-column-end: 15;
   	display: flex;
 	grid-row: 4;
-	padding-left: 7em;
-	padding-right: 7em;
+	padding-left: 15%;
+	padding-right: 15%;;
 	background-color: #E3E3E3;
 }
 
@@ -288,7 +307,7 @@ img {vertical-align: middle;}
 .animals{
 	grid-row: 6;
 	grid-column-start: 1;
-	grid-column-end: 6;
+	grid-column-end: 15;
 	height: auto;
 	display: block;
 	background-color: none;
@@ -296,11 +315,21 @@ img {vertical-align: middle;}
 	text-align: center;
 }
 
-/* Image Overlay (Animals & tips) */
-.container{
+/* Image Overlay (Animals & tips amd What to bring tips) */
+.container, .tips{
 	position: relative;
 	width: 275px;
-	height: auto;
+	height: 275px;
+	display: inline-block;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	margin: 0px 5px 10px 5px;
+	background-color: #555c66;
+}
+
+.w_t_b_img {
+	position: relative;
+	width: 275px;
+	height: 200px;
 	display: inline-block;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	margin: 0px 5px 10px 5px;
@@ -310,10 +339,6 @@ img {vertical-align: middle;}
 	display: block;
 	width: 100%;
 	height: 100%;
-}
-
-.:hover{
-    transform: scale(1.05);
 }
 
 .overlay{
@@ -329,6 +354,22 @@ img {vertical-align: middle;}
 	z-index: 100;
 }
 
+.w_t_b_img:hover .overlay, .container:hover .overlay{
+	opacity: 1;
+}
+
+.w_t_b_text{
+	color: white;
+	font-family: sans-serif;
+	position: absolute;
+	top: 10%;
+	left: 15%;
+	transform: translate(-10%,-10%);
+	font-size: 15px;
+	text-align: center;
+	height: 100%;
+}
+
 .text{
 	color: white;
 	font-family: sans-serif;
@@ -339,6 +380,7 @@ img {vertical-align: middle;}
 	font-size: 15px;
 	text-align: center;
 }
+
 
 .overlayLeft{
 	height: 100%;
@@ -400,13 +442,12 @@ img {vertical-align: middle;}
 	left: 0;
 	background-color: lightgreen;
 }
-
 /* Headers for Grid 4 & Grid 3 divs (Animals & tips and What to brign text) */
 
 .grid_4_headers {
 	box-sizing: border-box;
 	background-color: white;
-	grid-column: span 6;
+	grid-column: span 14;
 	height: 130px;
 }
 
@@ -414,7 +455,7 @@ img {vertical-align: middle;}
 	box-sizing: border-box;
 	background-color: #E3E3E3;
 	height: 170px;
-	grid-column: span 6;
+	grid-column: span 15;
 }
 
 .grid_4_headers h1, .grid_3_headers h1{
@@ -425,9 +466,19 @@ img {vertical-align: middle;}
 	color: #555c66;
 }
 
-.grid_4_headers h2, .grid_3_headers h2{
-    font-size: clamp(14px, 1.2vw, 30px);
+.grid_4_headers h2, .grid_3_headers h2 {
+    font-size: clamp(1em, 1.4vw, 20px);
    text-align: center;
+	width: 80%;
+	position: absolute;
+	color: #555c66;
+    margin: 0px 10% 0px 10%;
+	padding: 110px 0px 0px 0px;
+}
+
+.grid_3_headers p{
+    font-size: clamp(1em, 1.2vw, 14px);
+    text-align: center;
 	width: 80%;
 	position: absolute;
 	color: #555c66;
@@ -440,21 +491,18 @@ img {vertical-align: middle;}
 .what_to_bring_tips {
   display: inline-block;
   grid-column-start: 1;
-  grid-column-end: 7;
+  grid-column-end: 15;
   text-align: center;
   color: #CABDBD;
   grid-row: 6;
   margin-top: 50px;
-}
-
-.what_to_bring_tips h1{
-  font-size: clamp(2em, 1.4vw, 8em);
-	width: 100%; 
+  margin-bottom: 50px;
 }
 
 .what_to_bring_tips h2{
     font-size: clamp(1.2em, 1.4vw, 8em);
 	padding: 0px 20px 0px 20px;
+	color: white;	
 }
 
 .what_to_bring_tips p{
@@ -463,17 +511,22 @@ img {vertical-align: middle;}
 }
 
 .what_to_bring_tips img{
-	height: 225px;
-	width: 100%;
+	height: 125px;
+	width: 125px;
+	border-radius: 75px;
+	border: 8px solid #7A6E9A;
+	margin-top: 30px;
 }
 
-.image_1, .image_2, .image_3, .image_4, .image_5, .image_6{
+.w_t_b_img {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	background-color: #555c66;
 	display: inline-block;
-	width: 350px;
+	width: 385px;
+	height: 245px;
 	text-align: center;
-	margin: 0px 25px 50px 25px;
+	margin: 0px 20px 40px 20px;
+	border-radius: 10px;
 }
 
 /* Bottom to Top Button*/
@@ -506,60 +559,44 @@ hr{
 
 input[type=text], select, textarea {
 	width: 100%;
-	padding: 12px;
+	padding: 11px;
 	border: 1px solid #ccc;
-	border-radius: 4px;
+	border-radius: 5px;
 	resize: vertical;
 }
 
 input[type=submit] {
-	background-color: #9E9898;
+	background-color: #6e6a6a;
 	color: white;
 	padding: 12px 20px;
 	border: none;
 	border-radius: 4px;
 	cursor: pointer;
 	float: right;
-	margin-right: 5%;
 }
 
 input[type=submit]:hover {
-	background-color: #9E9898;
+	background-color: #6e6a6a;
 }
 
 .contact_container {
-	border-radius: 5px;
-	background-color: #E3E3E3;
-	padding: 20px;
+	padding: 2em;
 	grid-column-start: 1;
-	grid-column-end: 4;
-	height: 800px;
-	grid-row: 2;
+	grid-column-end: 15;
+    overflow-y: hidden;
+	height: 90vh;
 }
 
 .contact_container h1{
 	text-align: center;
+	color: white;
+    font-size: clamp(45px, 4vw, 65px);
+	margin: 25px;
 }
 
 .column2{
-	margin-left: 5%;
-	float:left;
-	width: 90%;
-	margin-top: 6px;
-}
-
-.column3{
-	grid-column-start: 4;
-	grid-column-end: 6;
-	float:left;
-	grid-row: 2;
+	margin: 6px auto auto auto;
 	text-align: center;
-}
-
-.column3 img{
-	width: 70%;
-	height: auto;
-	margin-top: 100px;
 }
 
 .row:after{
@@ -569,8 +606,10 @@ input[type=submit]:hover {
 }
 
 .row{
-	width: 100%;
+	max-width: 700px;
+	min-width: 400px;
 	background-color: none;
+	margin: auto auto auto auto;
 }
 
 /* Footer */
@@ -579,7 +618,7 @@ input[type=submit]:hover {
 	background-color: #555c66;
 	text-align: center;
 	grid-column-start: 1;
-	grid-column-end: 11;
+	grid-column-end: 15;
 	width: 100%;
 	padding: 25px;
 	height: 70px;
@@ -595,13 +634,9 @@ input[type=submit]:hover {
 
 /* On screens under 400px wide, decrease content size */
 @media only screen and (max-width: 400px) {
-  
-  div.about_us_B, div.about_us_A{
-	  height: 380px;
-  }
 	
 	div.slideshow img, div.slideshow{
-	  height: 200px
+	  height: 200px;
 	}
 	
 	div.mySlides{
@@ -619,19 +654,31 @@ input[type=submit]:hover {
 	div.headers_text h1{
 	top: 50px;
 	}
+	
+	div.about_us_B {
+	grid-column-start: 2;
+	grid-column-end: 14;
+	height: 400px;
+	}
+	
+	div.about_us_B p{
+	width: 80%;
+	}
+	
+	div.about_us_A {
+		visibility: hidden;
+	}
+
 }
 
 
 /* On screens under 900px wide, decrease content size */
 @media only screen and (min-width: 400px) and (max-width: 700px) { 	
-
- div.helpful_tips{
+	
+	div.helpful_tips{
 	flex-direction: column;
 	}
-	
-  div.about_us_B, div.about_us_A{
-	  height: 380px;
-  }
+
 	
 	div.slideshow img, div.slideshow{
 	  height: 200px
@@ -650,47 +697,119 @@ input[type=submit]:hover {
 	}
 
 	div.headers_text h1{
-	top: 30px;
+	top: 10px;
+	}
+	
+		div.about_us_B {
+	grid-column-start: 2;
+	grid-column-end: 14;
+	height: 420px;
+	}
+	
+	div.about_us_B p{
+	width: 80%;
+	}
+	
+	div.about_us_A {
+		visibility: hidden;
 	}
 }
 
 /* On screens under 900px wide, decrease content size */
 @media only screen and (min-width: 701px) and (max-width: 900px) { 	
+	
 	div.helpful_tips{
 	flex-direction: column;
 	}
 	
 	div.headers_text p{
-	top: 250px;
+	top: 200px;
 	}
 
 	div.headers_text h1{
-	top: 75px;
+	top: 45px;
+	}
+
+	div.about_us_B {
+	grid-column-start: 2;
+	grid-column-end: 14;
+	height: 340px;
+	}
+	
+	div.about_us_B p{
+	width: 80%;
+	}
+	
+	div.about_us_A {
+		visibility: hidden;
+	}
+
+		.helpful_tips {
+	padding-left: 15%;
+	padding-right: 15%;
+}
+	
+	.prev, .next {
+	  top: 200px;
+	}
+	
+	div.slideshow img, div.slideshow{
+	  height: 325px
+	}
+	
+	div.mySlides{
+	  height: 275px
 	}
 }
 	
 /* On screens under 1400px wide and above 901px, decrease content size */
-@media only screen and (min-width: 901px) and (max-width: 1499px) { 	
-	
+@media only screen and (min-width: 901px) and (max-width: 1499px){ 	
+
 	div.headers_text p{
-	top: 250px;
+	top: 275px;
 	}
 
 	div.headers_text h1{
-	top: 25px;
+	top: 50px;
 	}
+	
+	div.what_to_bring_tips{
+	grid-column-start: 1;
+	grid-column-end: 15;
+    }
+	
+	.helpful_tips {
+	padding-left: 5%;
+	padding-right: 5%;;
+}
+	div.animals{
+	grid-column-start: 2;
+	grid-column-end: 14;
+    }
+	
+		
+	.prev, .next {
+	  top: 250px;
+	}
+	
+		div.slideshow img, div.slideshow{
+	  height: 500px
+	}
+	
+	div.mySlides{
+	  height: 450px
+	}
+	
 	
 }
 
-/* On screens under 2500px wide and above 1500px, decrease content size */
-@media only screen and (min-width: 1500px) and (max-width: 2500px) { 	
-	
- div.animals{
-	grid-column-start: 2;
-	grid-column-end: 5;
-    }
-	
-	
+/* On screens under 1700px wide and above 1499px, decrease content size */
+@media only screen and (min-width: 1499px) and (max-width: 1700px){ 	
+
+div.about_us_B p{
+	padding: 150px 10% 30px 10%;
+	}
+
 	div.grid_4_headers h2, div.grid_3_headers h2{
 		margin-top: 30px;
 	}
@@ -702,10 +821,6 @@ input[type=submit]:hover {
     div.grid_4_headers{
 		height: 160px;
 	}	
-	
-	 div.about_us_A img{
-	  width: 45%;
-    }
 
 	div.slideshow img, div.slideshow{
 	  height: 600px;
@@ -722,4 +837,64 @@ input[type=submit]:hover {
 	div.headers_text h1{
 	top: 75px;
 	}
+	
+	div.animals{
+	grid-column-start: 2;
+	grid-column-end: 13;
+    }
+	
+	
+	div.what_to_bring_tips{
+	grid-column-start: 2;
+	grid-column-end: 14;
+    }
+	
+}
+
+/* On screens under 2500px wide and above 1500px, decrease content size */
+@media only screen and (min-width: 1700px) and (max-width: 2500px) {
+	
+	div.about_us_B p{
+	padding: 150px 10% 30px 10%;
+	}
+
+	div.grid_4_headers h2, div.grid_3_headers h2{
+		margin-top: 30px;
+	}
+	
+    div.grid_3_headers{
+		height: 200px;
+	}
+	
+    div.grid_4_headers{
+		height: 160px;
+	}	
+
+	div.slideshow img, div.slideshow{
+	  height: 600px;
+	}
+	
+	div.mySlides{
+	  height: 550px
+	}
+	
+	div.headers_text p{
+	top: 350px;
+	}
+
+	div.headers_text h1{
+	top: 75px;
+	}
+	
+	div.animals{
+	grid-column-start: 3;
+	grid-column-end: 13;
+    }
+	
+	
+	div.what_to_bring_tips{
+	grid-column-start: 2;
+	grid-column-end: 14;
+    }
+	
 }
