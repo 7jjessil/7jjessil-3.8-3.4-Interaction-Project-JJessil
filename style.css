@@ -5,17 +5,20 @@ html{
 body{
 	font-family: helvetoca. arial sans-serif;
 	margin: 0;
+    min-height: 100vh; 
 }
 
 .grid-container{
 	display: grid;
-	grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 	grid-template-rows: auto auto auto auto auto auto auto;
 }
 
 /* Logo */
 
 .logo{
+	grid-column-start: 1;
+	grid-column-end: 2;
 	background-color: #555c66;
 	padding: 5px 5px 5px 0px;
 	text-align: right;
@@ -29,7 +32,7 @@ body{
 	box-sizing: border-box;
 	background-color: #555c66;
 	grid-column-start: 2;
-	grid-column-end: 6;
+	grid-column-end: 11;
 	height: 50px;
     z-index: 9;
 }
@@ -95,7 +98,7 @@ ul li:hover ul {
   color: #f2f2f2;
   font-size: clamp(1em, 7.5vw, 8em);
   position: absolute;
-  top: 0;
+  top: 0%;
   width: 100%;
   text-align: center;
   text-shadow: grey 1px 0 10px;
@@ -131,7 +134,7 @@ body {font-family: Verdana, sans-serif; margin:0}
 img {vertical-align: middle;}
 
 .slideshow{
-  grid-column: span 6;
+  grid-column: span 10;
   grid-row: 2;
   height: 450px;
 }
@@ -215,7 +218,7 @@ img {vertical-align: middle;}
 .about_us_A  {
 	background-color: #CABDBD;
 	grid-column-start: 1;
-	grid-column-end: 3;
+	grid-column-end: 4;
 	text-align: center;
 	height: 400px;
 	z-index: 30;
@@ -224,9 +227,11 @@ img {vertical-align: middle;}
 
 .about_us_A img {
 	object-fit: cover;
-	width: 60%;
 	height: auto;
-	margin: 50px 0px 0px 0px;
+	width: 300px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .about_us_B {
@@ -234,8 +239,8 @@ img {vertical-align: middle;}
 	color: #CABDBD;
 	position: relative;
 	background-color: #555c66;
-	grid-column-start: 3;
-	grid-column-end: 6;
+	grid-column-start: 4;
+	grid-column-end: 11;
 	grid-row: 3;
 }
 
@@ -246,40 +251,8 @@ img {vertical-align: middle;}
 
 .about_us_B p{
 	text-align: center;
-  font-size: clamp(14px, 1.4vw, 16px);
+  font-size: clamp(14px, 1.4vw, 18px);
 	padding: 0px 40px 0px 40px;
-}
-
-/* 5 helpful tips (animals_and_tips) */
-
-.helpful_tips {
-	height: auto;
-	position: relative;
-	grid-column-start: 1;
-	grid-column-end: 7;
-  	display: flex;
-	grid-row: 4;
-	padding-left: 7em;
-	padding-right: 7em;
-	background-color: #E3E3E3;
-}
-
-.helpful_tips h1{
-    font-size: clamp(1em, 3.4vw, 8em);
-	text-align: center;
-	width: 100%;
-}
-
-.helpful_tips h2{
-	text-align: center;
-    font-size: clamp(1em, 1.4vw, 8em);
-	padding: 0px 30px 0px 30px;
-}
-
-.helpful_tips p{
-	text-align: center;
-  font-size: clamp(14px, 1.4vw, 16px);
-	padding: 0px 30px 0px 30px;
 }
 
 
@@ -288,19 +261,29 @@ img {vertical-align: middle;}
 .animals{
 	grid-row: 6;
 	grid-column-start: 1;
-	grid-column-end: 6;
+	grid-column-end: 11;
 	height: auto;
 	display: block;
 	background-color: none;
-	margin: 3em auto 3em auto;
+	margin: 3em 0.5em 3em 0.5em;
 	text-align: center;
 }
 
-/* Image Overlay (Animals & tips) */
-.container{
+/* Image Overlay (Animals & tips amd What to bring tips) */
+.container, .tips{
 	position: relative;
 	width: 275px;
-	height: auto;
+	height: 275px;
+	display: inline-block;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	margin: 0px 5px 10px 5px;
+	background-color: #555c66;
+}
+
+.w_t_b_img {
+	position: relative;
+	width: 275px;
+	height: 200px;
 	display: inline-block;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	margin: 0px 5px 10px 5px;
@@ -312,10 +295,6 @@ img {vertical-align: middle;}
 	height: 100%;
 }
 
-.:hover{
-    transform: scale(1.05);
-}
-
 .overlay{
 	position: absolute;
 	transition: all .2s ease;
@@ -323,10 +302,20 @@ img {vertical-align: middle;}
 	background-color: #eee;
 }
 
-.container:hover .overlay{
+.w_t_b_img:hover .overlay, .container:hover .overlay{
 	opacity: 1;
-    transform: scale(1.115);
-	z-index: 100;
+}
+
+.w_t_b_text{
+	color: white;
+	font-family: sans-serif;
+	position: absolute;
+	top: 10%;
+	left: 15%;
+	transform: translate(-10%,-10%);
+	font-size: 15px;
+	text-align: center;
+	height: 100%;
 }
 
 .text{
@@ -339,6 +328,7 @@ img {vertical-align: middle;}
 	font-size: 15px;
 	text-align: center;
 }
+
 
 .overlayLeft{
 	height: 100%;
@@ -406,7 +396,7 @@ img {vertical-align: middle;}
 .grid_4_headers {
 	box-sizing: border-box;
 	background-color: white;
-	grid-column: span 6;
+	grid-column: span 11;
 	height: 130px;
 }
 
@@ -414,7 +404,7 @@ img {vertical-align: middle;}
 	box-sizing: border-box;
 	background-color: #E3E3E3;
 	height: 170px;
-	grid-column: span 6;
+	grid-column: span 11;
 }
 
 .grid_4_headers h1, .grid_3_headers h1{
@@ -426,7 +416,7 @@ img {vertical-align: middle;}
 }
 
 .grid_4_headers h2, .grid_3_headers h2{
-    font-size: clamp(14px, 1.2vw, 30px);
+    font-size: clamp(1em, 1.4vw, 8em);
    text-align: center;
 	width: 80%;
 	position: absolute;
@@ -440,21 +430,19 @@ img {vertical-align: middle;}
 .what_to_bring_tips {
   display: inline-block;
   grid-column-start: 1;
-  grid-column-end: 7;
+  grid-column-end: 11;
   text-align: center;
   color: #CABDBD;
   grid-row: 6;
   margin-top: 50px;
-}
-
-.what_to_bring_tips h1{
-  font-size: clamp(2em, 1.4vw, 8em);
-	width: 100%; 
+  margin-bottom: 50px;
 }
 
 .what_to_bring_tips h2{
     font-size: clamp(1.2em, 1.4vw, 8em);
 	padding: 0px 20px 0px 20px;
+	color: white;
+	
 }
 
 .what_to_bring_tips p{
@@ -463,17 +451,22 @@ img {vertical-align: middle;}
 }
 
 .what_to_bring_tips img{
-	height: 225px;
-	width: 100%;
+	height: 125px;
+	width: 125px;
+	border-radius: 75px;
+	border: 8px solid #7A6E9A;
+	margin-top: 30px;
 }
 
-.image_1, .image_2, .image_3, .image_4, .image_5, .image_6{
+.w_t_b_img {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	background-color: #555c66;
 	display: inline-block;
-	width: 350px;
+	width: 385px;
+	height: 245px;
 	text-align: center;
-	margin: 0px 25px 50px 25px;
+	margin: 0px 20px 40px 20px;
+	border-radius: 10px;
 }
 
 /* Bottom to Top Button*/
@@ -508,58 +501,44 @@ input[type=text], select, textarea {
 	width: 100%;
 	padding: 12px;
 	border: 1px solid #ccc;
-	border-radius: 4px;
+	border-radius: 5px;
 	resize: vertical;
 }
 
 input[type=submit] {
-	background-color: #9E9898;
+	background-color: #6e6a6a;
 	color: white;
 	padding: 12px 20px;
 	border: none;
 	border-radius: 4px;
 	cursor: pointer;
 	float: right;
-	margin-right: 5%;
 }
 
 input[type=submit]:hover {
-	background-color: #9E9898;
+	background-color: #6e6a6a;
 }
 
 .contact_container {
-	border-radius: 5px;
-	background-color: #E3E3E3;
 	padding: 20px;
 	grid-column-start: 1;
-	grid-column-end: 4;
-	height: 800px;
+	grid-column-end: 11;
 	grid-row: 2;
+	background-color: #9E9898;
+	height: 1000px;
 }
 
 .contact_container h1{
 	text-align: center;
+	color: white;
+    font-size: clamp(2.6em, 2vw, 8em);
 }
 
 .column2{
-	margin-left: 5%;
-	float:left;
-	width: 90%;
+	margin: auto auto auto auto;
 	margin-top: 6px;
-}
-
-.column3{
-	grid-column-start: 4;
-	grid-column-end: 6;
-	float:left;
-	grid-row: 2;
 	text-align: center;
-}
 
-.column3 img{
-	width: 70%;
-	height: auto;
-	margin-top: 100px;
 }
 
 .row:after{
@@ -569,8 +548,10 @@ input[type=submit]:hover {
 }
 
 .row{
-	width: 100%;
+	max-width: 700px;
+	min-width: 400px;
 	background-color: none;
+	margin: auto auto auto auto;
 }
 
 /* Footer */
@@ -592,9 +573,8 @@ input[type=submit]:hover {
 	position: fixed;
 }
 
-
 /* On screens under 400px wide, decrease content size */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 299px) {
   
   div.about_us_B, div.about_us_A{
 	  height: 380px;
@@ -613,83 +593,141 @@ input[type=submit]:hover {
 	}
 	
 	div.headers_text p{
-	top: 14px;
+	top: 0%;
 	}
 
 	div.headers_text h1{
-	top: 50px;
+	top: 10%;
 	}
 }
 
 
-/* On screens under 900px wide, decrease content size */
-@media only screen and (min-width: 400px) and (max-width: 700px) { 	
-
- div.helpful_tips{
-	flex-direction: column;
-	}
+/* On screens between  400px wide and 700px, decrease content size */
+@media only screen and (min-width: 300px) and (max-width: 700px) { 	
 	
   div.about_us_B, div.about_us_A{
 	  height: 380px;
   }
 	
 	div.slideshow img, div.slideshow{
-	  height: 200px
+	  height: 250px
 	}
 	
 	div.mySlides{
-	  height: 150px
+	  height: 200px
 	}
 	
 	.prev, .next {
-	  top: 150px;
+	  top: 170px;
 	}
 	
 	div.headers_text p{
-	top: 110px;
+	top: 65%;
 	}
 
 	div.headers_text h1{
-	top: 30px;
+	top: 10%;
 	}
 }
 
 /* On screens under 900px wide, decrease content size */
 @media only screen and (min-width: 701px) and (max-width: 900px) { 	
-	div.helpful_tips{
-	flex-direction: column;
-	}
 	
 	div.headers_text p{
-	top: 250px;
+	top: 60%;
 	}
 
 	div.headers_text h1{
-	top: 75px;
+	top: 10%;
+	}
+	
+	div.slideshow img, div.slideshow{
+	  height: 350px;
+	}
+	
+	div.mySlides{
+	  height: 300px
+	}
+	
+	.prev, .next {
+	  top: 200px;
 	}
 }
-	
-/* On screens under 1400px wide and above 901px, decrease content size */
-@media only screen and (min-width: 901px) and (max-width: 1499px) { 	
+
+/* On screens under 1199 wide and above 901px, decrease content size */
+@media only screen and (min-width: 901px) and (max-width: 1199px) { 	
 	
 	div.headers_text p{
-	top: 250px;
+	top: 60%;
 	}
 
 	div.headers_text h1{
-	top: 25px;
+	top: 10%;
 	}
 	
+	div.what_to_bring_tips{
+	grid-column-start: 1;
+	grid-column-end: 11;
+    }	
+	
+	div.slideshow img, div.slideshow{
+	  height: 400px;
+	}
+	
+	div.mySlides{
+	  height: 350px
+	}
+
+	.prev, .next {
+	  top: 250px;
+	}
+}
+
+/* On screens under 1699 wide and above 1200px, decrease content size */
+@media only screen and (min-width: 1200px) and (max-width: 1699px) { 	
+	
+	div.headers_text p{
+	top: 60%;
+	}
+
+	div.headers_text h1{
+	top: 0%;
+	}
+	
+	div.what_to_bring_tips{
+	grid-column-start: 1;
+	grid-column-end: 11;
+    }	
+	
+	div.slideshow img, div.slideshow{
+	  height: 450px;
+	}
+	
+	div.mySlides{
+	  height: 400px
+	}
+
+	.prev, .next {
+	  top: 250px;
+	}
 }
 
 /* On screens under 2500px wide and above 1500px, decrease content size */
-@media only screen and (min-width: 1500px) and (max-width: 2500px) { 	
+@media only screen and (min-width: 1700px) and (max-width: 2500px) { 	
 	
- div.animals{
+ div.what_to_bring_tips{
 	grid-column-start: 2;
-	grid-column-end: 5;
+	grid-column-end: 10;
     }
-	
+    
+	div.animals{
+	grid-column-start: 2;
+	grid-column-end: 10;
+	}
+
+	div.about_us_A, div.about_us_B {
+	height: 425px;
+	}
 	
 	div.grid_4_headers h2, div.grid_3_headers h2{
 		margin-top: 30px;
@@ -716,10 +754,9 @@ input[type=submit]:hover {
 	}
 	
 	div.headers_text p{
-	top: 350px;
+	top: 55%;
 	}
 
 	div.headers_text h1{
-	top: 75px;
 	}
 }
