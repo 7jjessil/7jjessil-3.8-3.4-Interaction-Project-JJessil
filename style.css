@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
-
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Lato&family=Telex');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Montserrat&display=swap');
 
 html{
 	scroll-behavior: smooth;
@@ -45,8 +43,8 @@ body{
 }
 
 .nav a{
-	font-size: 14px;
-    font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+    font-family: 'Telex', sans-serif;
   font-weight: 400;
 }
 
@@ -115,7 +113,7 @@ ul li:hover ul {
   width: 100%;
   text-align: center;
   text-shadow: grey 1px 0 10px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 400;
 }
 
@@ -128,7 +126,7 @@ ul li:hover ul {
   top: 55%;
   text-shadow: grey 1px 0 10px;
   margin: 0px 10% 0px 10%;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 400;
 }
 
@@ -236,8 +234,17 @@ filter: invert(20%);
 
 /* Abouts_us (index) */
 
+#About_us{
+	background: rgb(20,118,221);
+	background: linear-gradient(180deg, rgba(20,118,221,1) 0%, rgba(24,239,240,1) 100%);
+	grid-column-start: 1;
+	grid-column-end: 15;
+	padding-left: 7.14285714%;
+	padding-right: 7.14285714%;
+	grid-row: 3;
+}
 .about_us_A  {
-	margin-top: 50px;
+	margin: 50px 0px 50px 0px;
 	background-color: white;
 	width: 100%;
 	grid-column-start: 2;
@@ -263,7 +270,7 @@ filter: invert(20%);
 /* Textual section in about_Us (index.html) */
 
 .about_us_B {
-	margin-top: 50px;
+	margin: 50px 0px 50px 0px;
 	padding: 20px 0px 0px 0px;
 	max-height: 350px;
 	min-height: 300px;
@@ -280,10 +287,10 @@ filter: invert(20%);
   font-size: clamp(2.5em, 3.4vw, 55px);
 	width: 65%;
 	position: absolute;
-	color: #c78007;
+	color: #309106;
 	padding: 0px 10% 30px 10%;
-	font-family: 'Roboto', sans-serif;
-	font-weight: 500;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
 }
 
 .about_us_B p{
@@ -292,8 +299,8 @@ filter: invert(20%);
 	color: #555c66;
 	width: 80%;
 	padding: 8% 10% 10% 10%;
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 400;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
 }
 /* 5 helpful tips (animals_and_tips) */
 
@@ -312,7 +319,7 @@ filter: invert(20%);
     font-size: clamp(1em, 3.4vw, 8em);
 	text-align: center;
 	width: 100%;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Lato', sans-serif;
 	font-weight: 400;
     text-shadow: grey 1px 0 10px;
 }
@@ -321,8 +328,8 @@ filter: invert(20%);
 	text-align: center;
     font-size: clamp(1em, 1.6vw, 8em);
 	padding: 0px 30px 0px 30px;
-	color: #309106;
-	font-family: 'Roboto', sans-serif;
+	color: orange;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 }
 
@@ -330,7 +337,7 @@ filter: invert(20%);
 	text-align: center;
     font-size: 16px;
 	padding: 0px 20px 0px 20px;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
 	line-height: 23px;
 }
@@ -398,23 +405,24 @@ filter: invert(20%);
 	left: 15%;
 	transform: translate(-10%,-10%);
 	text-align: center;
-	color: white;
+	color: #4c7397;
 	line-height: 22px;
-	font-family: 'Roboto', sans-serif;
-	font-weight: 400;
+	font-weight: 500;
 }
 
 .w_t_b_text h1{
 	font-size: 24px;
+	font-family: 'Lato', sans-serif;
 }
 
 .w_t_b_text p{
-	font-size: 16px;
+	font-size: 20px;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .w_t_b_img h2{
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 300;
+	font-family: 'Lato', sans-serif;
+	font-weight: 500;
 }
 
 
@@ -429,41 +437,31 @@ filter: invert(20%);
 }
 
 .text h1{
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Lato', sans-serif;
 	font-size: 23px;
 }
 
 .text h2{
 	margin-top: -15px;
 	font-size: 15px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-style: italic;
 }
 
 .text p{
 	margin-top: -5px;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 14px;
+	font-family: 'Lato', sans-serif;
+	font-size: 15px;
 }
 
+/* Image Overlay (Orange) */
 .overlayLeft{
 	height: 100%;
 	width: 0;
 	top: 0;
 	left: 0;
-	background-color: #dd9314;
-}
-
-.overlayRight{
-	height: 100%;
-	width: 0;
-	top: 0;
-	right: 0;
-	background-color: #4c7397;
-}
-
-.container:hover .overlayLeft, .container:hover .overlayRight{
-	width: 100%;
+	background: rgb(52,171,0);
+	background: linear-gradient(94deg, rgba(52,171,0,1) 0%, rgba(118,218,0,1) 100%); 
 }
 
 .overlayTop{
@@ -471,7 +469,22 @@ filter: invert(20%);
 	height: 0;
 	top: 0;
 	left: 0;
-	background-color: #4d96db;
+	background: rgb(52,171,0);
+	background: linear-gradient(94deg, rgba(52,171,0,1) 0%, rgba(118,218,0,1) 100%);
+}
+
+/* Image Overlay (Green) */
+.overlayRight{
+	height: 100%;
+	width: 0;
+	top: 0;
+	right: 0;
+	background: rgb(249,129,42);
+	background: linear-gradient(180deg, rgba(249,129,42,1) 0%, rgba(249,166,2,1) 100%);
+}
+
+.container:hover .overlayLeft, .container:hover .overlayRight{
+	width: 100%;
 }
 
 .overlayBottom{
@@ -479,19 +492,22 @@ filter: invert(20%);
 	height: 0;
 	bottom: 0;
 	left: 0;
-	background-color: orange;
+	background: rgb(249,129,42);
+	background: linear-gradient(180deg, rgba(249,129,42,1) 0%, rgba(249,166,2,1) 100%);
 }
 
 .container:hover .overlayTop, .container:hover .overlayBottom{
 	height: 100%;
 }
 
+/* Image Overlay (Blue) */
 .overlayCross{
 	width: 0;
 	height: 0;
 	top: 0;
 	left: 0;
-	background-color: #4d96db;
+	background: rgb(4,90,180);
+	background: linear-gradient(180deg, rgba(4,90,180,1) 0%, rgba(0,128,255,1) 100%);
 }
 
 .container:hover .overlayCross{
@@ -500,21 +516,23 @@ filter: invert(20%);
 	background-color: orange;
 }
 
-.overlayFade{
+.overlayFade {/* (For Animals & Tips page) */
 	width: 100%;
 	height: 100%;
 	top: 0;
 	left: 0;
-	background-color: #4c7397;
+	background: rgb(4,90,180);
+	background: linear-gradient(180deg, rgba(4,90,180,1) 0%, rgba(0,128,255,1) 100%);
+}
+
+.overlayFadeWhite{/* (For what to bring page tabs) */
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: white;
 }
 /* Headers for Grid 4 & Grid 3 divs (Animals & tips and What to brign text) */
-
-.grid_4_headers {
-	box-sizing: border-box;
-	background-color: white;
-	grid-column: span 14;
-	height: 120px;
-}
 
 .grid_4B_headers {
 	box-sizing: border-box;
@@ -524,21 +542,6 @@ filter: invert(20%);
   text-shadow: grey 1px 0 10px;
 }
 
-.grid_3_headers {
-	box-sizing: border-box;
-	height: 170px;
-	grid-column: span 15;
-}
-
-.grid_4_headers h1, .grid_3_headers h1{
-  font-size: clamp(24px, 2.5vw, 36px);
-	text-align: center;
-	width: 100%;
-	position: absolute;
-	color: #c78007;
-	padding: 20px 0px 0px 0px;
-	font-family: 'Roboto', sans-serif;
-}
 
 .grid_4B_headers h1{
 	color: white;
@@ -547,8 +550,8 @@ filter: invert(20%);
 	width: 100%;
 	position: absolute;
 	margin: 0px 0px 0px 0px;
-	font-family: 'Roboto', sans-serif;
-	font-weight: 400;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
 }
 
 .grid_4B_headers p{
@@ -559,9 +562,35 @@ filter: invert(20%);
 	position: absolute;
     margin: 0px 10% 0px 10%;
 	padding: 70px 0px 0px 0px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
 	font-style: italic;
+}
+
+.grid_4_headers {
+	box-sizing: border-box;
+	background-color: white;
+	grid-column: span 14;
+	height: 120px;
+}
+
+.grid_3_headers {
+	box-sizing: border-box;
+	height: 170px;
+	grid-column: span 15;
+}
+
+.grid_4_headers h1, .grid_3_headers h1{
+    font-size: clamp(24px, 3vw, 36px);
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	color: #c78007;
+	padding: 20px 0px 0px 0px;
+	font-family: 'Lato', sans-serif;
+    background: -webkit-linear-gradient(#9aaf08, #31d739);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .grid_4_headers h2, .grid_3_headers h2{
@@ -569,10 +598,10 @@ filter: invert(20%);
    text-align: center;
 	width: 80%;
 	position: absolute;
-	color: #309106;
+	color: #1476dd;
     margin: 0px 10% 0px 10%;
 	padding: 90px 0px 0px 0px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
 }
 
@@ -581,7 +610,6 @@ filter: invert(20%);
     text-align: center;
 	width: 80%;
 	position: absolute;
-	color: #555c66;
     margin: 0px 18% 0px 10%;
 	padding: 110px 0px 0px 0px;
 }
@@ -592,9 +620,9 @@ filter: invert(20%);
     grid-row: 4;
 	grid-column-start: 1;
 	grid-column-end: 15;	
-	background: rgb(221,147,20);
-	background: linear-gradient(180deg, rgba(221,147,20,1) 0%, rgba(240,196,24,1) 100%);
-	margin-top: 50px;
+	background: rgb(154,175,8);
+	background: linear-gradient(180deg, rgba(154,175,8,1) 0%, rgba(49,215,57,1) 100%);
+	margin-bottom: -20px;
 }
 
 .what_to_bring_tips {
@@ -675,10 +703,13 @@ input[type=text], select, textarea {
 	border: 1px solid #ccc;
 	border-radius: 5px;
 	resize: vertical;
+	font-size: 14px;
+    font-family: 'Telex', sans-serif;
 }
 
 input[type=submit] {
-	background-color: #478ac9;
+	background: rgb(4,90,180);
+	background: linear-gradient(180deg, rgba(4,90,180,1) 0%, rgba(0,128,255,1) 100%);
 	color: white;
 	padding: 12px 20px;
 	border: none;
@@ -708,6 +739,7 @@ input[type=submit]:hover {
 	margin: 25px;
     text-shadow: grey 1px 0 5px;
 	font-weight: 700;
+    font-family: 'Telex', sans-serif;
 }
 
 .column2{
@@ -742,7 +774,7 @@ input[type=submit]:hover {
 	color: white;
 	grid-row: 7;
 	font-size: 16px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Telex', sans-serif;
     font-weight: 400;
 }
 
@@ -755,7 +787,7 @@ input[type=submit]:hover {
     color: white;
     font-weight: 400px;
     font-size: 14px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Telex', sans-serif;
 	margin-top: -10px;
 }
 
