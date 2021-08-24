@@ -3,7 +3,7 @@
 	<head>
 		<title>Index</title>
 		<meta charset="utf-8">
-		<meta name="Keywords" contet="html5, layout, CSS Grid System"/>
+		<meta name="Keywords" content="html5, layout, CSS Grid System"/>
 		<meta name="Author" content="Jomin Jessil"/>
 		<meta name="Description" content="CSS Grid System Layout Tutorial"/>		
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,8 +23,14 @@
 	
 	<div class="nav">
 		<ul>
-			<li><a href="animals_and_tips.html"> Link 1</a>
-			<li><a href="contact.html">Link 2</a></li>
+			<li><a href="animals_and_tips.html">Animals & Tips</a>
+			
+				<ul>
+				<li><a href="#grid3">About Us</a></li>
+				<li><a href="#grid4">What to Bring</a></li> 
+				</ul>
+				
+			<li><a href="contact.html">Contact</a></li>
 	</div>		
 	
 		<!-- Slideshow container -->
@@ -33,26 +39,26 @@
 	<div class="slideshow-container">
 
 	<div class="mySlides fade">
-	  <img src="images/placeholder.png" alt="">
+	  <img src="images/placeholder.png" alt="" class="slide_img">
 	 <div class="headers_text">
-		<h1>Header 1</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<p>		  
+		<h1>Safari Trip Advisory</h1>
+		<p>This is where you will learn about tips, tricks and animals for your adventure<p>		  
 	</div>
 	</div>
 
 	<div class="mySlides fade">
-	  <img src="images/placeholder.png" alt="">
+	  <img src="images/placeholder.png" alt="" class="slide_img">
 	 <div class="headers_text">
-		<h1>Header 2</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<p>		  
+		<h1>Safari Trip Advisory</h1>
+		<p>This is where you will learn about tips, tricks and animals for your adventure<p>		  
 	</div>
 	</div>
 
 	<div class="mySlides fade">
-	  <img src="images/placeholder.png" alt="">
+	  <img src="images/placeholder.png" alt="" class="slide_img">
 	 <div class="headers_text">
-		<h1>Header 3</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<p>		  
+		<h1>Safari Trip Advisory</h1>
+		<p>This is where you will learn about tips, tricks and animals for your adventure<p>	  
 	</div>
 	</div>
 
@@ -69,80 +75,113 @@
 	  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 	  <a class="next" onclick="plusSlides(1)">&#10095;</a>
 	</div>
-	<br>
+	<br>		
 	
-	
-	<!--About Us-->
-	<div class="about_us_A">
-		<img src="images/placeholder.png">
-	</div>	
-	
-	<div class="about_us_B">
-		<h1>Header</h1>
-		<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 		 laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non."<p>
-	</div>
+			<!--About_Us -->
+		
+<div id="About_us">
+		<div class="about_us_A">
+			<img src="images/placeholder.png">
+		</div>	
 
+		<div class="about_us_B" id="grid3">
+			<h1>About Us</h1>
+			<p> We here at Safari Trip Advisory would like to ensure that you are completely prepared for your adventure on the wonderous plains of the African Safari and intend on informing you as much as we can on the various African animals and on what you should bring for your trip.<p>
+		</div>	
+</div>
+		
+			<!--What to bring -->
+
+<div class="what_to_bring-container"> <!-- Reminder: REPLACE URLS WITH DOWNLOADED IMAGES LATER -->
+	
 	<!--What to bring (header text)-->
-	<div class="grid_4_headers">
-		<h1>Header</h1>
-		<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</h2>
+	<div class="grid_4B_headers" id="grid4">
+		<h1>What to bring on your Trip</h1>
+		<p>These are some of the most important things you may need on your safari trip<p>
 	</div>
 	
 	<!--What to bring (images & text/tips)-->
 	<div class="what_to_bring_tips">
 		
-		<div class= "image_1">
-		<img src="images/placeholder.png">
-		<h1>Header</h1>
-		<h2>Subheader</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<p>
-		</div>
+	<div class= "w_t_b_img">
+		<img src="images/placeholder.png" class ="icon">
+		<h2>Legal Information</h2>
+			<div class="overlay overlayFadeWhite">
+				<div class="w_t_b_text">
+				<h1>Legal Information</h1>
+				<p>Ensure to bring your passport, itinerary any tickets, travel and insurance documents and keep it safe as it is vital to leave and go to the safari.<p>
+				</div>
+			</div>
+	</div>
 
-		<div class= "image_2">
-		<img src="images/placeholder.png">
-		<h1>Header</h1>
-		<h2>Subheader</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<p>
-		</div>
+	<div class= "w_t_b_img">
+		<img src="images/placeholder.png" class ="icon">
+		<h2>Medicine</h2>
+			<div class="overlay overlayFadeWhite">
+				<div class="w_t_b_text">
+				<h1>Medicine</h1>
+				<p>Put any prescription and preventive meds in hand luggage in case it gets lost in your main luggage and bring more than enough for each medicine type in case you want to spend more time on the safari.<p>
+				</div>
+			</div>
+	</div>
 		
-		<div class= "image_3">
-		<img src="images/placeholder.png">
-		<h1>Header</h1>
-		<h2>Subheader</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<p>
-		</div>
+	<div class= "w_t_b_img">
+		<img src="images/placeholder.png" class ="icon">
+		<h2>Protection against Heat</h2>
+			<div class="overlay overlayFadeWhite">
+				<div class="w_t_b_text">
+				<h1>Protection against Heat</h1>
+				<p>If you wear prescription glass bring prescription sunglasses, along with a hat that goes all around not just the front and sunblock as you will be outside most of the time.<p>
+				</div>
+			</div>
+	</div>
 		
-		<br>
+	<div class= "w_t_b_img">
+		<img src="images/placeholder.png" class ="icon">
+		<h2>Clothes & Toiletries</h2>
+			<div class="overlay overlayFadeWhite">
+				<div class="w_t_b_text">
+				<h1>Clothes & Toiletries</h1>
+				<p>Do not forget to bring your toiletries and make sure that all your clothes are casual but conformable.
 
-		<div class= "image_4">
-		<img src="images/placeholder.png">
-		<h1>Header</h1>
-		<h2>Subheader</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<p>
-		</div>
+<p>
+				</div>
+			</div>
+	</div>
+	
+	<div class= "w_t_b_img">
+		<img src="images/placeholder.png" class ="icon">
+		<h2>For the Memories</h2>
+			<div class="overlay overlayFadeWhite">
+				<div class="w_t_b_text">
+				<h1>For the Memories</h1>
+				<p>Make sure to bring a high-quality camera, that can record video and magnify large scale distance and ensure to bring binoculars to see animals far in the distance
 
-		<div class= "image_5">
-		<img src="images/placeholder.png">
-		<h1>Header</h1>
-		<h2>Subheader</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<p>
-		</div>
-		
-		<div class= "image_6">
-		<img src="images/placeholder.png">
-		<h1>Header</h1>
-		<h2>Subheader</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<p>
-		</div>
-		
+<p>
+				</div>
+			</div>
+	</div>
+
+		<div class= "w_t_b_img">
+		<img src="images/placeholder.png" class ="icon">
+		<h2>Technology & Music</h2>
+			<div class="overlay overlayFadeWhite">
+				<div class="w_t_b_text">
+				<h1>Technology & Music</h1>
+				<p>Bring as much music as you can to keep you entertained, when you can't see animals, bring country-specific adaptors and bring your laptop to download your images from the day 
+
+<p>
+				</div>
+			</div>
+	</div>
+		<div class="flaticon_copyright"><p>"Icons made by Pixel perfect from www.flaticon.com"<p></div>
+	</div>
 	</div>
 	
 	<button onclick="topFunction()" id="myBtn" title="Go to top"><img src="images/placeholder.png" height="50" width="auto"></button>
 
-	<div class="footer"> Copyright Statement </div>
+	<div class="footer">&copy; Safari Trip Advisory 2021, Jomin Jessil all rights reserved </div>		
 		
-	</div>
-
 	</body>
 
 	<script src="js/slideshow.js"></script>
