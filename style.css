@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin&family=Lato&family=Telex');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
 
 html{
 	scroll-behavior: smooth;
@@ -126,7 +129,8 @@ ul li:hover ul {
   top: 55%;
   text-shadow: grey 1px 0 10px;
   margin: 0px 10% 0px 10%;
-  font-family: 'Lato', sans-serif;
+  padding-top: 10px;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 400;
 }
 
@@ -235,8 +239,8 @@ filter: invert(20%);
 /* Abouts_us (index) */
 
 #About_us{
-	background: rgb(20,118,221);
-	background: linear-gradient(180deg, rgba(20,118,221,1) 0%, rgba(24,239,240,1) 100%);
+	background: rgb(154,175,8);
+	background: linear-gradient(180deg, rgba(154,175,8,1) 0%, rgba(49,215,57,1) 100%);
 	grid-column-start: 1;
 	grid-column-end: 15;
 	padding-left: 7.14285714%;
@@ -287,7 +291,7 @@ filter: invert(20%);
   font-size: clamp(2.5em, 3.4vw, 55px);
 	width: 65%;
 	position: absolute;
-	color: #309106;
+	color: #c78007;
 	padding: 0px 10% 30px 10%;
 	font-family: 'Lato', sans-serif;
 	font-weight: 700;
@@ -315,30 +319,20 @@ filter: invert(20%);
 	padding-right: 15%;
 }
 
-.helpful_tips h1{
-    font-size: clamp(1em, 3.4vw, 8em);
-	text-align: center;
-	width: 100%;
-	font-family: 'Lato', sans-serif;
-	font-weight: 400;
-    text-shadow: grey 1px 0 10px;
-}
-
 .helpful_tips h2{
 	text-align: center;
     font-size: clamp(1em, 1.6vw, 8em);
 	padding: 0px 30px 0px 30px;
-	color: orange;
-	font-family: 'Montserrat', sans-serif;
+	color: #309106;
+	font-family: 'Lato', sans-serif;
 	font-weight: 700;
 }
 
 .helpful_tips p{
 	text-align: center;
     font-size: 16px;
-	padding: 0px 20px 0px 20px;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 400;
+	padding: 0px 16px 0px 16px;
+	font-family: 'Open Sans', sans-serif;
 	line-height: 23px;
 }
 
@@ -376,6 +370,38 @@ filter: invert(20%);
 	margin: 0px 5px 10px 5px;
 }
 
+.grid_4B_headers {
+	box-sizing: border-box;
+	grid-column: span 14;
+	height: 140px;
+	margin-top: 50px;
+	background-color: white;
+}
+
+
+.grid_4B_headers h1{
+	color: #c78007;
+    font-size: clamp(2.2em, 3vw, 45px);
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	margin: 0px 0px 0px 0px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+}
+
+.grid_4B_headers p{
+	color: #309106;
+    font-size: clamp(1em, 1.6vw, 18px);
+    text-align: center;
+	width: 80%;
+	position: absolute;
+    margin: 0px 10% 0px 10%;
+	padding: 65px 0px 0px 0px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 500;
+}
+
 .image{
 	display: block;
 	width: 100%;
@@ -405,24 +431,25 @@ filter: invert(20%);
 	left: 15%;
 	transform: translate(-10%,-10%);
 	text-align: center;
-	color: #4c7397;
 	line-height: 22px;
-	font-weight: 500;
 }
 
 .w_t_b_text h1{
 	font-size: 24px;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+	color: #4CBB17;
 }
 
 .w_t_b_text p{
 	font-size: 20px;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+	color: black;
 }
 
 .w_t_b_img h2{
-	font-family: 'Lato', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-weight: 500;
+	color: #4c7397;
 }
 
 
@@ -437,31 +464,31 @@ filter: invert(20%);
 }
 
 .text h1{
-	font-family: 'Lato', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 23px;
 }
 
 .text h2{
 	margin-top: -15px;
 	font-size: 15px;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-style: italic;
 }
 
 .text p{
-	margin-top: -5px;
-	font-family: 'Lato', sans-serif;
-	font-size: 15px;
+	margin-top: -7px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
 }
 
-/* Image Overlay (Orange) */
+/* Image Overlay (Green) */
 .overlayLeft{
 	height: 100%;
 	width: 0;
 	top: 0;
 	left: 0;
-	background: rgb(52,171,0);
-	background: linear-gradient(94deg, rgba(52,171,0,1) 0%, rgba(118,218,0,1) 100%); 
+	background: rgb(154,175,8);
+	background: linear-gradient(180deg, rgba(154,175,8,1) 0%, rgba(49,215,57,1) 100%);
 }
 
 .overlayTop{
@@ -469,18 +496,37 @@ filter: invert(20%);
 	height: 0;
 	top: 0;
 	left: 0;
-	background: rgb(52,171,0);
-	background: linear-gradient(94deg, rgba(52,171,0,1) 0%, rgba(118,218,0,1) 100%);
+	background: rgb(154,175,8);
+	background: linear-gradient(180deg, rgba(154,175,8,1) 0%, rgba(49,215,57,1) 100%);
 }
 
-/* Image Overlay (Green) */
+/* Image Overlay (Orange) */
+
+.overlayFadeOrange {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgb(249,129,42);
+	background: linear-gradient(360deg, rgba(249,129,42,1) 0%, rgba(249,166,2,1) 100%);
+}
+
+.overlayTopOrange{
+	width: 100%;
+	height: 0;
+	top: 0;
+	left: 0;
+	background: rgb(249,129,42);
+	background: linear-gradient(360deg, rgba(249,129,42,1) 0%, rgba(249,166,2,1) 100%);
+}
+
 .overlayRight{
 	height: 100%;
 	width: 0;
 	top: 0;
 	right: 0;
 	background: rgb(249,129,42);
-	background: linear-gradient(180deg, rgba(249,129,42,1) 0%, rgba(249,166,2,1) 100%);
+	background: linear-gradient(360deg, rgba(249,129,42,1) 0%, rgba(249,166,2,1) 100%);
 }
 
 .container:hover .overlayLeft, .container:hover .overlayRight{
@@ -493,27 +539,27 @@ filter: invert(20%);
 	bottom: 0;
 	left: 0;
 	background: rgb(249,129,42);
-	background: linear-gradient(180deg, rgba(249,129,42,1) 0%, rgba(249,166,2,1) 100%);
+	background: linear-gradient(360deg, rgba(249,129,42,1) 0%, rgba(249,166,2,1) 100%);
 }
 
 .container:hover .overlayTop, .container:hover .overlayBottom{
 	height: 100%;
 }
 
-/* Image Overlay (Blue) */
+/* Image Overlay (Yellow) */
+
 .overlayCross{
 	width: 0;
 	height: 0;
 	top: 0;
 	left: 0;
-	background: rgb(4,90,180);
-	background: linear-gradient(180deg, rgba(4,90,180,1) 0%, rgba(0,128,255,1) 100%);
+background: rgb(255,150,11);
+background: linear-gradient(360deg, rgba(255,150,11,1) 0%, rgba(255,178,11,1) 100%);
 }
 
 .container:hover .overlayCross{
 	height: 100%;
 	width: 100%;
-	background-color: orange;
 }
 
 .overlayFade {/* (For Animals & Tips page) */
@@ -521,8 +567,8 @@ filter: invert(20%);
 	height: 100%;
 	top: 0;
 	left: 0;
-	background: rgb(4,90,180);
-	background: linear-gradient(180deg, rgba(4,90,180,1) 0%, rgba(0,128,255,1) 100%);
+background: rgb(255,150,11);
+background: linear-gradient(360deg, rgba(255,150,11,1) 0%, rgba(255,178,11,1) 100%);
 }
 
 .overlayFadeWhite{/* (For what to bring page tabs) */
@@ -532,40 +578,7 @@ filter: invert(20%);
 	left: 0;
 	background-color: white;
 }
-/* Headers for Grid 4 & Grid 3 divs (Animals & tips and What to brign text) */
-
-.grid_4B_headers {
-	box-sizing: border-box;
-	grid-column: span 14;
-	height: 80px;
-	margin-top: 50px;
-  text-shadow: grey 1px 0 10px;
-}
-
-
-.grid_4B_headers h1{
-	color: white;
-    font-size: clamp(2.2em, 2.5vw, 45px);
-	text-align: center;
-	width: 100%;
-	position: absolute;
-	margin: 0px 0px 0px 0px;
-	font-family: 'Lato', sans-serif;
-	font-weight: 700;
-}
-
-.grid_4B_headers p{
-	color: white;
-    font-size: clamp(1em, 1.4vw, 18px);
-    text-align: center;
-	width: 80%;
-	position: absolute;
-    margin: 0px 10% 0px 10%;
-	padding: 70px 0px 0px 0px;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 400;
-	font-style: italic;
-}
+/* Headers for Grid 4 & Grid 3 divs (Animals & tips) */
 
 .grid_4_headers {
 	box-sizing: border-box;
@@ -581,16 +594,13 @@ filter: invert(20%);
 }
 
 .grid_4_headers h1, .grid_3_headers h1{
-    font-size: clamp(24px, 3vw, 36px);
+  font-size: clamp(24px, 2.7vw, 36px);
 	text-align: center;
 	width: 100%;
 	position: absolute;
 	color: #c78007;
 	padding: 20px 0px 0px 0px;
-	font-family: 'Lato', sans-serif;
-    background: -webkit-linear-gradient(#9aaf08, #31d739);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+	font-family: 'Roboto', sans-serif;
 }
 
 .grid_4_headers h2, .grid_3_headers h2{
@@ -598,10 +608,10 @@ filter: invert(20%);
    text-align: center;
 	width: 80%;
 	position: absolute;
-	color: #1476dd;
+	color: #309106;
     margin: 0px 10% 0px 10%;
-	padding: 90px 0px 0px 0px;
-	font-family: 'Montserrat', sans-serif;
+	padding: 105px 0px 0px 0px;
+	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
 }
 
@@ -610,6 +620,7 @@ filter: invert(20%);
     text-align: center;
 	width: 80%;
 	position: absolute;
+	color: #555c66;
     margin: 0px 18% 0px 10%;
 	padding: 110px 0px 0px 0px;
 }
@@ -619,9 +630,8 @@ filter: invert(20%);
 .what_to_bring-container{
     grid-row: 4;
 	grid-column-start: 1;
-	grid-column-end: 15;	
-	background: rgb(154,175,8);
-	background: linear-gradient(180deg, rgba(154,175,8,1) 0%, rgba(49,215,57,1) 100%);
+	grid-column-end: 15;
+    background: white;
 	margin-bottom: -20px;
 }
 
@@ -634,6 +644,8 @@ filter: invert(20%);
   grid-row: 6;
   padding-top: 50px;
   padding-bottom: 30px;
+background: rgb(255,166,11);
+background: linear-gradient(360deg, rgba(255,166,11,1) 0%, rgba(255,220,11,1) 100%);
 }
 
 .what_to_bring_tips h2{
@@ -708,8 +720,7 @@ input[type=text], select, textarea {
 }
 
 input[type=submit] {
-	background: rgb(4,90,180);
-	background: linear-gradient(180deg, rgba(4,90,180,1) 0%, rgba(0,128,255,1) 100%);
+	background: #0080FF;
 	color: white;
 	padding: 12px 20px;
 	border: none;
@@ -717,10 +728,13 @@ input[type=submit] {
 	cursor: pointer;
 	float: right;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: 'Telex', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
 }
 
 input[type=submit]:hover {
-	background-color: #2181db;
+	background: #005eff;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -739,7 +753,6 @@ input[type=submit]:hover {
 	margin: 25px;
     text-shadow: grey 1px 0 5px;
 	font-weight: 700;
-    font-family: 'Telex', sans-serif;
 }
 
 .column2{
@@ -785,9 +798,9 @@ input[type=submit]:hover {
 
 .flaticon_copyright{
     color: white;
-    font-weight: 400px;
+    font-weight: 300px;
     font-size: 14px;
-    font-family: 'Telex', sans-serif;
+    font-family: 'Roboto', sans-serif;
 	margin-top: -10px;
 }
 
