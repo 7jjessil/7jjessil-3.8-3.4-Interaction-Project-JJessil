@@ -8,23 +8,26 @@
 
 html{
 	scroll-behavior: smooth;
-    overflow-x: hidden;
+	overflow-x: hidden;
 }
 
 body{
-  margin: 0;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+	margin-left: 100px;
+	overflow-x: hidden;
 }
 
 .grid-container{
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
 	grid-template-rows: auto auto auto auto auto auto auto;
 }
 
 .Nav_Menu{
+	display:flex;
 	grid-column-start: 1;
 	grid-column-end: 15;
 	grid-row: 1;
@@ -43,6 +46,7 @@ img{
 /* Logo */
 
 .logo_index, .logo{
+	background: rgb(85,92,102, 1);
 	text-align: right;
 	z-index: 100;
 	height: 60px;
@@ -62,6 +66,7 @@ img{
 /* Navigation Menu */
 
 .nav{
+	background: rgb(85,92,102, 1);
 	flex: 13;
 	box-sizing: border-box;
 	width: 100%;
@@ -149,36 +154,30 @@ ul li:hover ul {
   margin-top: -15px;
 }
 
-.four:hover ~ hr {
-  margin-left: 30px;
-  width: 75px;
-  visibility: visible;
-  border: none;
-  top: 48px;
+.underline{
+  position: relative;
 }
 
-.five:hover ~ hr {
-  margin-left: 30px;
-  width: 110px;
-  visibility: visible;
-  border: none;
-  top: 100px;
+.underline::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0.3em;
+  top: 22px;
+  background: rgb(249,129,42);
+  background: linear-gradient(360deg, rgba(249,129,42,1) 0%, rgba(249,166,2,1) 100%);  border: none;
+  transition: width 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+  border-radius: 100px;
 }
 
-.six:hover ~ hr {
-  margin-left:30px;
-  width: 40px;
-  visibility: visible;
-  border: none;
-  top: 50px;
-}
-
-.seven:hover ~ hr {
-  margin-left: 30px;
-  width: 70px;
-  visibility: visible;
-  border: none;
-  top: 100px;
+@media (hover: hover) and (pointer: fine) {
+  .underline:hover::before{
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
 }
 
 
@@ -217,7 +216,7 @@ hr {
   width: 80%;
   text-align: center;
   text-shadow: grey 1px 0 10px;
-  margin: 10px 10% 0px 10%;
+  margin: 0px 10% 0px 10%;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   top: 360px;
@@ -225,16 +224,11 @@ hr {
 
 /* Slideshow images */
 .mySlides{
-  height: 100%;
+    height: 100%;
 	grid-row: 2;
 	z-index: 2;
-	grid-column-start: 1;
-	grid-column-end: 15;
-}
-
-.mySlides{
+	flex: 15;
 	height: 85vh;
-	grid-row: 2;
 }
 
 .mySlides img{
@@ -262,7 +256,7 @@ img {vertical-align: middle;}
 }
 
 .slide_img{
-filter: invert(15%);
+filter: invert(20%);
 }
 
 
@@ -277,12 +271,10 @@ img {vertical-align: middle;}
   position: absolute;
   top: 50%;
   width: auto;
-  font-weight: thin;
   font-size: 30px;
   transition: 0.6s ease;
   user-select: none;
   border-radius: 100%;
-  background-color: none;
   height: 50px;
   width: 50px;
   color: white;
@@ -438,7 +430,7 @@ img {vertical-align: middle;}
 
 .helpful_tips h2{
 	text-align: center;
-    font-size: clamp(1em, 1.6vw, 8em);
+    font-size: clamp(20px, 1.6vw, 25px);
 	padding: 0px 30px 0px 30px;
 	color: #309106;
 	font-family: 'Lato', sans-serif;
@@ -459,8 +451,7 @@ img {vertical-align: middle;}
 .animals{
 	grid-row: 6;
 	grid-column-start: 1;
-	grid-column-end: 14;
-	width: 100%;
+	grid-column-end: 15;
 	display: block;
 	background-color: white;
 	margin: 3em auto 3em auto;
@@ -475,8 +466,7 @@ img {vertical-align: middle;}
 	height: 314px;
 	display: inline-block;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	margin: 0px -4px -4px -4px;
-	background-color: #555c66;
+	margin: 0px -3px -3px -3px;
 }
 
 .w_t_b_img {
@@ -488,7 +478,7 @@ img {vertical-align: middle;}
 	margin: 0px 5px 10px 5px;
 }
 
-.grid_4B_headers {
+.what_to_bring_headers {
 	box-sizing: border-box;
 	grid-column: span 14;
 	height: 140px;
@@ -496,9 +486,9 @@ img {vertical-align: middle;}
 	background-color: white;
 }
 
-.grid_4B_headers h1{
+.what_to_bring_headers h1{
 	color: #c78007;
-    font-size: clamp(2.2em, 3vw, 45px);
+    font-size: clamp(2em, 3vw, 45px);
 	text-align: center;
 	width: 100%;
 	position: absolute;
@@ -507,7 +497,7 @@ img {vertical-align: middle;}
 	font-weight: 700;
 }
 
-.grid_4B_headers p{
+.what_to_bring_headers p{
 	color: #309106;
     font-size: clamp(1em, 1.6vw, 18px);
     text-align: center;
@@ -705,7 +695,7 @@ img {vertical-align: middle;}
 .grid_4_headers {
 	box-sizing: border-box;
 	background-color: white;
-	grid-column: span 14;
+	grid-column: span 15;
 	height: 120px;
 }
 
@@ -716,7 +706,7 @@ img {vertical-align: middle;}
 }
 
 .grid_4_headers h1, .grid_3_headers h1{
-  font-size: clamp(24px, 2.7vw, 36px);
+  font-size: clamp(30px, 2.7vw, 36px);
 	text-align: center;
 	width: 100%;
 	position: absolute;
@@ -804,7 +794,7 @@ img {vertical-align: middle;}
 #myBtn {
   display: none;
   position: fixed;
-  bottom: 20px;
+  bottom: 30px;
   right: 30px;
   z-index: 500;
   font-size: 18px;
@@ -814,12 +804,11 @@ img {vertical-align: middle;}
   border-radius: 1000px;
   width: 58px;
   height:58px;
+  background: none;
 }
 
 #myBtn img{
-  margin: -100px;
-}
-#myBtn:hover {
+ margin:-100px;
 }
 
 /*********** Contact Form ***************/
@@ -841,20 +830,22 @@ input[type=text], select, textarea {
 input[type=submit] {
 	background: #0080FF;
 	color: white;
+	margin-bottom: 70px;
 	padding: 12px 20px;
 	border: none;
 	border-radius: 4px;
 	cursor: pointer;
 	float: right;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 		rgba(0, 0, 0, 0.19);
     font-family: 'Telex', sans-serif;
 	font-weight: 400;
 	font-size: 14px;
+	margin-right: 10px;
 }
 
 input[type=submit]:hover {
 	background: #005eff;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 		rgba(0, 0, 0, 0.19);
 }
 
 .contact_container {
@@ -863,19 +854,20 @@ input[type=submit]:hover {
 	grid-column-start: 1;
 	grid-column-end: 15;
     overflow-y: hidden;
+	height: 90vh;
 }
 
 .contact_container h1{
 	text-align: center;
-	color: white;
-    font-size: clamp(45px, 4vw, 65px);
-	margin: 25px;
-    text-shadow: grey 1px 0 5px;
+	color: white;  
+	font-size: clamp(45px, 4vw, 65px);
+	margin: 0px 25px 25px 25px;
 	font-weight: 700;
+    text-shadow: grey 1px 0 5px;
 }
 
 .column2{
-	margin: 6px auto auto auto;
+	margin: 6px 10px auto 10px;
 	text-align: center;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -887,8 +879,8 @@ input[type=submit]:hover {
 }
 
 .row{
-	max-width: 700px;
-	min-width: 300px;
+	max-width: 720px;
+	min-width: 100px;
 	margin: auto auto auto auto;
 }
 
@@ -897,14 +889,13 @@ input[type=submit]:hover {
 .footer, .contact_footer  {
 	background-color: #555c66;
 	text-align: center;
-	grid-column-start: 1;
-	grid-column-end: 15;
+	grid-column: span 15;
 	width: 100%;
 	padding: 25px;
 	height: 70px;
 	color: white;
 	grid-row: 7;
-	font-size: 16px;
+    font-size: clamp(14px, 2vw, 16px);
     font-family: 'Telex', sans-serif;
     font-weight: 400;
 }
@@ -923,12 +914,25 @@ input[type=submit]:hover {
 }
 
 /* On screens under 900px wide, decrease content size */
-@media only screen and (min-width: 300px) and (max-width: 550px) { 	
+@media only screen and (min-width: 200px) and (max-width: 550px) { 	
+	
+	div.animals p{
+	font-size: 15px;
+	}
+	
+	div.container, div.tips{
+		width:  300px;
+		height: 300px;
+	}
+	
+	div.contact_container h1{
+		margin-top: 30px;
+	}
 	
 	div.helpful_tips{
 	flex-direction: column;
-    padding-left: 25%;
-    padding-right: 25%;
+    padding-left: 20%;
+    padding-right: 20%;
 	}
 	
 	div.slideshow img, div.slideshow{
@@ -937,11 +941,6 @@ input[type=submit]:hover {
 	
 	div.mySlides{
 	  height: 200px;
-	}
-	
-	.prev, .next {
-	  top: 200px;
-	  font-size: 20px;
 	}
 	
 	div.mySlides p{
@@ -962,26 +961,43 @@ input[type=submit]:hover {
 	
 	div.about_us_B p{
 	width: 80%;
-	padding: 15% 10% 30px 10%;
+	padding: 16% 10% 30px 10%;
 	}
 	
 	div.about_us_A {
 		visibility: hidden;
 	}
 	
+	div.grid_4_headers h2, div.grid_3_headers h2{
+		margin-top: -5px;
+	}
+	
+	div.grid_4_headers, div.grid_3_headers{
+		height: 170px;
+	}	
+	
+	div.grid_4_headers h2{
+		padding-top: 140px;
+	}	
+	
 	/* Next & previous buttons */
 	.prev, .next {
 		height: 40px;
 		width: 40px;
+	    top: 160px;
+	    font-size: 20px;
 	}
 
 	.next {
 	  padding: 5px 0px 5px 15px;
+	  right: 10px;
 	}
 
 	.prev {
 	  padding: 5px 0px 10px 13px;
+	  left: 10px;
 	}
+	
 }
 
 /* On screens under 900px wide, decrease content size */
@@ -1039,10 +1055,12 @@ input[type=submit]:hover {
 
 	.next {
 	  padding: 5px 0px 5px 15px;
+	  right: 10px;
 	}
 
 	.prev {
 	  padding: 5px 0px 10px 13px;
+	  left: 10px;
 	}
 }
 
@@ -1070,7 +1088,7 @@ input[type=submit]:hover {
 	}
 	
    div.about_us_B p{
-	padding: 0% 12% 30px 12%;
+	padding: 9% 12% 30px 10%;
 	}
 	
 	div.about_us_A {
@@ -1083,7 +1101,7 @@ input[type=submit]:hover {
 }
 	
 	.prev, .next {
-	  top: 250px;
+	  top: 290px;
 	}
 	
 	div.slideshow img, div.slideshow{
@@ -1094,9 +1112,6 @@ input[type=submit]:hover {
 	  height: 450px;
 	}
 			
-	.contact_container h1{
-	  padding: 0em 2em 0em 2em;
-	}
 }
 
 /* On screens under 1400px wide and above 901px, decrease content size */
@@ -1136,10 +1151,6 @@ input[type=submit]:hover {
 	div.about_us_B h1{
 	padding-left: 37%;
 	}
-			
-	.contact_container h1{
-	  padding: 0em 2em 0em 2em;
-	}
 	
 	.mySlides h1{
 	  top: 140px;
@@ -1162,13 +1173,9 @@ input[type=submit]:hover {
 	padding-left: 5%;
 	padding-right: 5%;;
 }
-	div.animals{
-	grid-column-start: 1;
-	grid-column-end: 15;
-	}
 	
 	div.about_us_B p{
-	padding: 8% 0% 30px 30%;
+	padding: 7% 0% 30px 30%;
 	  width: 75%;
 	}
 	
@@ -1222,10 +1229,6 @@ input[type=submit]:hover {
     padding-right: 8em;
     padding-left: 8em;
 	}
-		
-	.contact_container h1{
-	  padding: 1.5em 2em 0em 2em;
-	}
 	
 	.About_us{
 	padding-left: 10em;
@@ -1236,7 +1239,7 @@ input[type=submit]:hover {
 
 
 /* On screens under 2500px wide and above 1700px, decrease content size */
-@media only screen and (min-width: 1700px) and (max-width: 2500px) {
+@media only screen and (min-width: 1700px) and (max-width: 3500px) {
 	
 	div.about_us_B p{
 		padding: 5.5% 10% 0% 25%;
@@ -1264,9 +1267,19 @@ input[type=submit]:hover {
 		height: 130px;
 	}	
 
+		
+	div.mySlides h1{
+	top:195px;
+	}
+	
+	div.mySlides p{
+	top:410px;
+	}
+	
 	div.animals{
 	grid-column-start: 3;
 	grid-column-end: 13;
+	padding-bottom: 20px;
     }
 	
 	div.what_to_bring_tips{
@@ -1277,14 +1290,6 @@ input[type=submit]:hover {
 	div.mySlides{
 	height: 88vh;
 	grid-row: 2;
-	}
-	
-	div.mySlides h1{
-	top:30;
-	}
-	
-	div.mySlides p{
-	top:400px;
 	}
 
 	div.mySlides img{
@@ -1302,11 +1307,6 @@ input[type=submit]:hover {
 	.row{
 	max-width: 800px;
 	min-width: 700px;
-	margin: auto auto auto auto;
-	}
-	
-	.contact_container h1{
-	  padding: 1.5em 2em 0em 2em;
 	}
 
 	.w_t_b_img {
@@ -1333,4 +1333,9 @@ input[type=submit]:hover {
 		line-height: 25px;
 	}
 
+	#myBtn {
+	  right: 20px;
+	  bottom: 20px
+	}
+	
 }
